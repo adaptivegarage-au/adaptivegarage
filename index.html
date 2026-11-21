@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adaptive Garage — Limited Pre-Order Drop</title>
+    <title>Adaptive Garage</title>
     <!-- Google Fonts: Bebas Neue & Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,8 +35,7 @@
             overflow-x: hidden;
         }
 
-        /* Typography & Utility */
-        h1, h2, h3, .brand-font {
+        h1, .brand-font {
             font-family: 'Bebas Neue', sans-serif;
             letter-spacing: 1.5px;
             text-transform: uppercase;
@@ -74,7 +73,7 @@
             color: var(--text-white);
             position: relative;
         }
-        
+
         .ag-emblem::after {
             content: '';
             position: absolute;
@@ -91,113 +90,17 @@
             letter-spacing: 2px;
         }
 
-        /* Hero Section */
+        /* Main Placeholder Content */
         .hero {
             max-width: 720px;
-            margin: 0 auto;
-            padding: 80px 24px 60px 24px;
+            margin: auto;
+            padding: 80px 24px;
             text-align: center;
-        }
-
-        .tagline-badge {
-            display: inline-block;
-            background: var(--surface-charcoal);
-            border: 1px solid var(--border-gray);
-            padding: 6px 16px;
-            font-size: 14px;
-            letter-spacing: 3px;
-            color: var(--text-gray);
-            margin-bottom: 24px;
-            text-transform: uppercase;
         }
 
         h1 {
             font-size: clamp(48px, 8vw, 76px);
             line-height: 0.95;
-            margin-bottom: 20px;
-        }
-
-        .hero-subtitle {
-            font-size: 18px;
-            color: var(--text-gray);
-            line-height: 1.6;
-            margin-bottom: 40px;
-            max-width: 540px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        /* Email Signup Form */
-        .signup-form {
-            display: flex;
-            gap: 12px;
-            max-width: 480px;
-            margin: 0 auto 16px auto;
-        }
-
-        .signup-input {
-            flex: 1;
-            background: var(--surface-charcoal);
-            border: 1px solid var(--border-gray);
-            padding: 16px 20px;
-            color: var(--text-white);
-            font-size: 16px;
-            outline: none;
-            transition: border-color 0.2s;
-        }
-
-        .signup-input:focus {
-            border-color: var(--adaptive-orange);
-        }
-
-        .signup-button {
-            background: var(--adaptive-orange);
-            color: var(--bg-black);
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 22px;
-            letter-spacing: 1px;
-            padding: 0 32px;
-            border: none;
-            cursor: pointer;
-            transition: opacity 0.2s;
-        }
-
-        .signup-button:hover {
-            opacity: 0.9;
-        }
-
-        .form-disclaimer {
-            font-size: 13px;
-            color: var(--text-gray);
-        }
-
-        /* Feature Pillars */
-        .pillars {
-            max-width: 960px;
-            margin: 40px auto 80px auto;
-            padding: 0 24px;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 24px;
-        }
-
-        .pillar-card {
-            background: var(--surface-charcoal);
-            border: 1px solid var(--border-gray);
-            padding: 32px;
-            text-align: left;
-        }
-
-        .pillar-card h3 {
-            font-size: 26px;
-            margin-bottom: 12px;
-            color: var(--text-white);
-        }
-
-        .pillar-card p {
-            font-size: 14px;
-            color: var(--text-gray);
-            line-height: 1.5;
         }
 
         /* Footer */
@@ -216,7 +119,6 @@
         .social-links {
             display: flex;
             gap: 20px;
-            margin-bottom: 4px;
         }
 
         .social-links a {
@@ -230,15 +132,6 @@
         .social-links a:hover {
             color: var(--adaptive-orange);
         }
-
-        @media (max-width: 600px) {
-            .signup-form {
-                flex-direction: column;
-            }
-            .signup-button {
-                padding: 16px;
-            }
-        }
     </style>
 </head>
 <body>
@@ -247,46 +140,19 @@
     <header>
         <div class="logo-area">
             <div class="ag-emblem">AG</div>
-            <span class="brand-name">ADAPTIVE GARAGE</span>
+            <span class="brand-name brand-font">ADAPTIVE GARAGE</span>
         </div>
-        <div style="font-size: 13px; color: var(--text-gray); letter-spacing: 1px;">LIMITED PRE-ORDER</div>
     </header>
 
-    <!-- Hero Content -->
+    <!-- Main Content -->
     <main class="hero">
-        <div class="tagline-badge">PROJECT BUILD APPAREL</div>
         <h1>NOT JUNK. JUST <span class="highlight-orange">NOT</span> FINISHED.</h1>
-        <p class="hero-subtitle">Heavyweight, understated workshop streetwear built for hands-on vehicle restorations, late nights in the shed, and the driveways that started it all.</p>
-
-        <!-- Email Capture Form -->
-        <form class="signup-form" onsubmit="event.preventDefault(); alert('You are on the list! We will notify you when pre-orders drop.');">
-            <input type="email" class="signup-input" placeholder="Enter your email address..." required>
-            <button type="submit" class="signup-button">Notify Me</button>
-        </form>
-        <div class="form-disclaimer">Zero spam. Get early VIP access 48 hours before public drop.</div>
-
-        <!-- Pillars -->
-        <div class="pillars" style="margin-top: 80px;">
-            <div class="pillar-card">
-                <h3>01. Heavyweight Build</h3>
-                <p>Designed for real workshop use. Thick cotton fleece and durable fabrics that handle grease, tools, and daily wear without blinking.</p>
-            </div>
-            <div class="pillar-card">
-                <h3>02. Understated Esthétic</h3>
-                <p>Clean left-chest AG geometry and minimal back hit typography. Built to look sharp at a car meet or relaxing around the house.</p>
-            </div>
-            <div class="pillar-card">
-                <h3>03. Limited Batch Pre-Orders</h3>
-                <p>No mass-produced fast fashion. Small-batch runs tied directly to garage builds, vehicle rescues, and channel milestones.</p>
-            </div>
-        </div>
     </main>
 
     <!-- Footer -->
     <footer>
         <div class="social-links">
-            <a href="https://youtube.com/@adaptivegarage" target="_blank">YouTube</a>
-            <a href="https://instagram.com" target="_blank">Instagram</a>
+            <a href="https://youtube.com/@adaptivegarage" target="_blank" rel="noopener noreferrer">YouTube</a>
         </div>
         <div>&copy; 2026 Adaptive Garage (adaptivegarage.com.au). All Rights Reserved.</div>
     </footer>
