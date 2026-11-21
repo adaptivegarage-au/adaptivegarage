@@ -46,19 +46,21 @@
         }
 
         /* Header */
-        header {
-            padding: 24px 32px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid var(--border-gray);
-        }
+        /* Replace the old header and .ag-emblem rules with: */
+    header {
+        padding: 32px;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid var(--border-gray);
+        background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+                    url('banner.jpg') center/cover no-repeat;
+    }
 
-        .logo-area {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
+    .logo-img {
+        height: 44px;
+        width: auto;
+        display: block;
+    }
 
         .ag-emblem {
             width: 36px;
